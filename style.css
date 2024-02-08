@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-pink: hsl(275, 100%, 97%);
+  --grayish-purple: hsl(292, 16%, 49%);
+  --dark-purple: hsl(292, 42%, 14%);
+  --hover: #ad28eb;
+}
+
+main {
+  min-height: 100vh;
+  background-color: var(--light-pink);
+}
+
+.mobile {
+  display: none;
+}
+
+#sec2 {
+  position: relative;
+}
+
+#faq-content {
+  max-width: 800px;
+  height: auto;
+  background-color: var(--white);
+  position: absolute;
+  left: 50%;
+  bottom: 25%;
+  transform: translate(-50%, 50%);
+  border-radius: 12px;
+  box-shadow: 0px 0px 2px var(--grayish-purple);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.img {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#headline {
+  padding-top: 1%;
+  float: left;
+  font-size: 1.1rem;
+  font-size: 2rem;
+  color: var(--dark-purple);
+  font-family: "Work Sans";
+  margin-bottom: 0.2rem;
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.query {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.heading {
+  font-size: 1rem;
+  font-family: "Work Sans";
+  color: var(--dark-purple);
+  font-weight: 700;
+  transition: 0.2s ease-in;
+}
+
+.heading:hover {
+  color: var(--hover);
+}
+
+.para-hidden {
+  font-size: 0.9rem;
+  font-weight: 400;
+  font-family: "Work Sans";
+  line-height: 1.2rem;
+  word-spacing: 0.1rem;
+  opacity: 0.8;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 200ms ease;
+}
+
+.hr-style {
+  border: 1px solid var(--grayish-purple);
+  opacity: 0.3;
+}
+
+img,
+svg {
+  display: block;
+}
+
+.Minus {
+  display: none;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .mobile {
+    display: block;
+    width: 100%;
+  }
+  .desktop {
+    display: none;
+  }
+
+  #sec2 {
+    padding-top: 8.5rem;
+  }
+
+  #faq-content {
+    width: 95%;
+    bottom: 0% !important;
+  }
+
+  #faq-content .heading {
+    font-size: 1.1rem;
+  }
+
+  #faq-content .para-hidden {
+    font-size: 0.8rem;
+  }
+}
